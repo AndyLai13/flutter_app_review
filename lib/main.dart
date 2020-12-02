@@ -13,6 +13,7 @@ import 'package:flutter_app_review/horizontal_list.dart';
 import 'package:flutter_app_review/long_lists.dart';
 import 'package:flutter_app_review/multi_type_list.dart';
 import 'package:flutter_app_review/orientation.dart';
+import 'package:flutter_app_review/physics_card_drag.dart';
 import 'package:flutter_app_review/retrieve_text_value.dart';
 import 'package:flutter_app_review/return_data.dart';
 import 'package:flutter_app_review/ripples_button.dart';
@@ -50,6 +51,7 @@ class Route {
   static const String TextValidator = '/textValidator';
   static const String AnimatedOpacity = '/animatedOpacity';
   static const String AnimatedProp = '/animatedProp';
+  static const String PhysicsCardDrag = '/physicsCardDrag';
 }
 
 class MyApp extends StatelessWidget {
@@ -90,6 +92,7 @@ class MyApp extends StatelessWidget {
         Route.TextValidator: (context) => TextValidatorApp(),
         Route.AnimatedOpacity: (context) => AnimatedOpacityApp(),
         Route.AnimatedProp: (context) => AnimatedPropApp(),
+        Route.PhysicsCardDrag: (context) => PhysicsCardDragApp(),
       },
       title: 'Welcome to Flutter',
       home: HomePage(),
@@ -283,9 +286,9 @@ class HomePage extends StatelessWidget {
                   },
                 ),
                 ElevatedButton(
-                  child: Text(''),
+                  child: Text('Physics Card Drag'),
                   onPressed: () {
-                    Navigator.pushNamed(context, Route.RetrieveTextValue);
+                    Navigator.pushNamed(context, Route.PhysicsCardDrag);
                   },
                 ),
                 ElevatedButton(
